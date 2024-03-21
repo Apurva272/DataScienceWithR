@@ -1,0 +1,5 @@
+packages.install(NHANES)
+library(dplyr)
+library(NHANES)
+data(NHANES)
+NHANES %>% filter(Gender == "male", AgeDecade == " 40-49") %>% group_by(Race1) %>% summarize(average = mean(BPSysAve,na.rm = TRUE), standard_deviation = sd(BPSysAve,na.rm = TRUE)) %>%arrange(average) %>%head()
