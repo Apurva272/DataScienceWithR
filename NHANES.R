@@ -1,4 +1,4 @@
-packages.install(NHANES)
+install.packages("NHANES")
 library(dplyr)
 library(NHANES)
 data(NHANES)
